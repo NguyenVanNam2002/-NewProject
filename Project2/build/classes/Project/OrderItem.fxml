@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="125.0" prefWidth="1200.0" style="-fx-border-color: black; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.OrderItem">
+   <children>
+      <ImageView fx:id="image" fitHeight="118.0" fitWidth="170.0" layoutX="59.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="name" layoutX="249.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="195.6708984375" />
+      <Text fx:id="price" layoutX="881.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="953.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VNĐ" />
+      <CheckBox fx:id="check" layoutX="13.0" layoutY="53.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="21.0" prefWidth="9.0" />
+      <Spinner fx:id="spinner" layoutX="507.0" layoutY="46.0" onMouseClicked="#quantityUpdate" />
+      <Text fx:id="id" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="user" layoutX="13.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="31.0" fitWidth="68.0" layoutX="1114.0" layoutY="46.0" onMouseClicked="#Delete" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../delete_bin_24px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

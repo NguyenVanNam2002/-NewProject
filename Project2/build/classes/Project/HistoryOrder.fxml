@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1299.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.HistoryOrder">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="101.0" prefWidth="1299.0" style="-fx-background-color: #FF7F50;">
+         <children>
+            <Text fill="WHITE" layoutX="551.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Snack Shop" wrappingWidth="181.22265625">
+               <font>
+                  <Font name="System Bold Italic" size="34.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="#f2f0f0" glyphName="USER" layoutX="100.0" layoutY="51.0" size="45" text="" />
+            <Text fx:id="user" fill="#fcfcfc" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="243.99999904632568">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="45.0" fitWidth="65.0" layoutX="754.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/hamburger_96px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="767.0" fitWidth="1299.0" layoutY="100.0" pickOnBounds="true">
+         <image>
+            <Image url="@../hinh-nen-may-tinh-don-gian.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="150.0" layoutX="7.0" layoutY="101.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../back_100px.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="45.0" layoutY="235.0" prefHeight="612.0" prefWidth="490.0">
+         <content>
+            <TableView fx:id="TableviewOrder" onMouseClicked="#OnmouseClick" prefHeight="610.0" prefWidth="488.0">
+              <columns>
+                <TableColumn fx:id="orderID" prefWidth="106.0" text="Mã Order" />
+                <TableColumn fx:id="Total_Price" prefWidth="162.0" text="Tổng tiền" />
+                  <TableColumn fx:id="datetime" prefWidth="218.0" text="Ngày đặt" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="533.0" layoutY="265.0" prefHeight="580.0" prefWidth="763.0" style="-fx-background-color: white; -fx-border-color: white;">
+         <content>
+            <GridPane fx:id="grid" prefHeight="13.0" prefWidth="3.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="533.0" layoutY="237.0" prefHeight="28.0" prefWidth="763.0" style="-fx-background-color: #d6d3d3; -fx-border-color: gray;">
+         <children>
+            <Text layoutX="223.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sản phẩm" />
+            <Text layoutX="421.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng" />
+            <Text layoutX="592.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

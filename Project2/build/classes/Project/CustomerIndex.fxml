@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.FunctionAminCustomer">
+   <children>
+      <Pane layoutX="1.0" prefHeight="794.0" prefWidth="1120.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="452.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer">
+               <font>
+                  <Font name="System Bold Italic" size="59.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="delete" layoutX="536.0" layoutY="728.0" onAction="#btndelete" prefHeight="52.0" prefWidth="185.0" style="-fx-background-color: #4bc9da;" text="Delete" textFill="#f3f7f8">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></JFXButton>
+            <ScrollPane layoutX="194.0" layoutY="149.0" prefHeight="550.0" prefWidth="868.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+            <TableView fx:id="Tableview" layoutX="192.0" layoutY="147.0" prefHeight="553.0" prefWidth="874.0">
+               <columns>
+                  <TableColumn fx:id="account" prefWidth="179.0" text="Tài khoản" />
+                  <TableColumn fx:id="password" prefWidth="148.0" text="Mật khẩu" />
+                  <TableColumn fx:id="name" prefWidth="169.0" text="Tên người dùng" />
+                  <TableColumn fx:id="phone" prefWidth="178.0" text="Số điện thoại" />
+                  <TableColumn fx:id="address" prefWidth="199.0" text="Địa chỉ" />
+               </columns>
+            </TableView>
+            <VBox layoutY="-9.0" prefHeight="804.0" prefWidth="116.0" style="-fx-background-color: #ae9b9b;">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" size="60">
+                     <VBox.margin>
+                        <Insets left="35.0" top="25.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <JFXButton fx:id="btnproduct" onAction="#btnproduct" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #99c1c2;" text="Sản phẩm">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btncategory" onAction="#btncategory" prefHeight="49.0" prefWidth="126.0" style="-fx-background-color: #99c1c2;" text="Danh mục">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnfeedback" onAction="#btnfeedback" prefHeight="52.0" prefWidth="118.0" style="-fx-background-color: #99c1c2;" text="Feedback">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="49.0" prefWidth="125.0" style="-fx-background-color: white;" text="Khách hàng">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="logout" onAction="#btnlogout" prefHeight="49.0" prefWidth="117.0" style="-fx-background-color: #99c1c2;" text="Logout">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="715.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../user_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="787.0" prefWidth="1118.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.FeedbackUIController">
+   <children>
+      <JFXButton fx:id="btnUpdate" layoutX="401.0" layoutY="706.0" onAction="#btnUpdateClick" prefHeight="52.0" prefWidth="98.0" style="-fx-background-color: #668aff;" text="Update " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="820.0" layoutY="706.0" onAction="#btnDeleteClick" prefHeight="52.0" prefWidth="98.0" style="-fx-background-color: #668aff;" text="Delete " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="452.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FeedBack Manager" wrappingWidth="298.44140625">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="COMMENTS" layoutX="751.0" layoutY="121.0" size="32" text="" wrappingWidth="36.0" />
+      <ScrollPane layoutX="140.0" layoutY="186.0" prefHeight="492.0" prefWidth="958.0">
+         <content>
+            <TableView fx:id="tvFeedback" prefHeight="490.0" prefWidth="955.0">
+               <columns>
+                  <TableColumn fx:id="tcFbID" prefWidth="106.0" text="Mã FeedBack" />
+                  <TableColumn fx:id="tcContent" prefWidth="700.0" text="Nội dung" />
+                  <TableColumn fx:id="tcProductID" prefWidth="150.0" text="Mã sản phẩm" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <VBox layoutY="1.0" prefHeight="787.0" prefWidth="116.0" style="-fx-background-color: #ae9b9b;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" size="60">
+               <VBox.margin>
+                  <Insets left="35.0" top="25.0" />
+               </VBox.margin>
+            </FontAwesomeIconView>
+            <JFXButton fx:id="btnproduct" onAction="#btnproduct" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #99c1c2;" text="Sản phẩm">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btncategory" onAction="#btncategory" prefHeight="49.0" prefWidth="126.0" style="-fx-background-color: #99c1c2;" text="Danh mục">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="52.0" prefWidth="118.0" style="-fx-background-color: white;" text="Feedback">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btncustomer" onAction="#btncustomer" prefHeight="49.0" prefWidth="125.0" style="-fx-background-color: #99c1c2;" text="Khách hàng">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="logout" onAction="#btnlogout" prefHeight="49.0" prefWidth="117.0" style="-fx-background-color: #99c1c2;" text="Logout">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="145.0" prefWidth="729.0" style="-fx-border-color: black; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.HistoryOrderDetail">
+   <children>
+      <ImageView fx:id="image" fitHeight="139.0" fitWidth="170.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" />
+      <Text fx:id="name" layoutX="219.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="195.6708984375" />
+      <Text fx:id="price" layoutX="547.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="159.0" />
+      <Text fx:id="quantity" layoutX="415.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="88.6708924844861" />
+   </children>
+</AnchorPane>

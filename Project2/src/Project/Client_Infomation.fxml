@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="866.0" prefWidth="1299.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Client_infomation">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="101.0" prefWidth="1299.0" style="-fx-background-color: #FF7F50;">
+         <children>
+            <Text fx:id="user" fill="#fcfcfc" layoutX="1055.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="243.99999904632568">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text layoutX="151.0" layoutY="84.0" onMouseClicked="#Infomation" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông TIn Cá nhân" />
+            <Text layoutX="337.0" layoutY="84.0" onMouseClicked="#ChangePassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Đổi Mật khẩu" />
+            <Separator layoutX="297.0" layoutY="61.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="3.0" />
+            <Separator layoutX="129.0" layoutY="60.0" prefHeight="2.0" prefWidth="170.0" />
+            <Separator layoutX="126.0" layoutY="60.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="6.0" />
+            <Text layoutX="61.0" layoutY="87.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="767.0" fitWidth="1299.0" layoutY="100.0" pickOnBounds="true">
+         <image>
+            <Image url="@../hinh-nen-may-tinh-don-gian.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="updateinformation" layoutX="483.0" layoutY="694.0" onAction="#btnupdateInformation" prefHeight="74.0" prefWidth="374.0" style="-fx-background-color: gray;" text="Cập nhập thông tin" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView glyphName="BOOK" size="25" />
+         </graphic>
+         <font>
+            <Font size="26.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="BOOK" layoutX="407.0" layoutY="214.0" size="45" text="" />
+      <Text fill="WHITE" layoutX="554.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông Tin cá nhân">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="443.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="name" layoutX="511.0" layoutY="296.0" prefHeight="31.0" prefWidth="317.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="phone" layoutX="511.0" layoutY="394.0" prefHeight="31.0" prefWidth="317.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="address" layoutX="511.0" layoutY="486.0" prefHeight="31.0" prefWidth="317.0" style="-fx-background-color: white;" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PHONE" layoutX="453.0" layoutY="430.0" size="45" text="" />
+      <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="453.0" layoutY="514.0" size="45" text="" />
+      <Text fx:id="succes" fill="RED" layoutX="380.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="608.9999943375587">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="errors" fill="RED" layoutX="511.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
+      <Text fx:id="errors1" fill="RED" layoutX="511.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
+      <Text fx:id="errors11" fill="RED" layoutX="511.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
+   </children>
+</AnchorPane>

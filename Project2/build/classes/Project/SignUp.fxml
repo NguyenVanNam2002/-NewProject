@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1075.0" style="-fx-background-color: #ff2e00;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.FunctionSingUpInsert">
+   <children>
+      <Pane layoutX="404.0" prefHeight="651.0" prefWidth="671.0" style="-fx-background-color: white;">
+         <children>
+            <Text fill="#e80f0f" layoutX="272.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+               <font>
+                  <Font name="System Bold Italic" size="35.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="name" labelFloat="true" layoutX="189.0" layoutY="87.0" prefHeight="47.0" prefWidth="378.0" promptText="You Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="account" labelFloat="true" layoutX="186.0" layoutY="183.0" prefHeight="47.0" prefWidth="378.0" promptText="Enter account">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="phone" labelFloat="true" layoutX="186.0" layoutY="386.0" prefHeight="47.0" prefWidth="378.0" promptText="Enter you Number">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="address" labelFloat="true" layoutX="186.0" layoutY="477.0" prefHeight="47.0" prefWidth="378.0" promptText="Enter you address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="186.0" layoutY="287.0" prefHeight="47.0" prefWidth="378.0" promptText="Enter you Password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <FontAwesomeIconView glyphName="KEY" layoutX="104.0" layoutY="326.0" size="45" style="-fx-fill: blue;" />
+            <FontAwesomeIconView glyphName="USER" layoutX="112.0" layoutY="230.0" size="45" style="-fx-fill: blue;" />
+            <FontAwesomeIconView glyphName="PHONE" layoutX="109.0" layoutY="427.0" size="45" style="-fx-fill: blue;" text="" />
+            <FontAwesomeIconView glyphName="HOME" layoutX="109.0" layoutY="516.0" size="45" style="-fx-fill: blue;" text="" />
+            <FontAwesomeIconView glyphName="BOOK" layoutX="109.0" layoutY="128.0" size="45" strikethrough="true" style="-fx-fill: blue;" text="" />
+            <JFXButton fx:id="SignUp" buttonType="RAISED" layoutX="282.0" layoutY="597.0" onAction="#btnSignUp" prefHeight="47.0" prefWidth="140.0" style="-fx-background-color: green;" text="Sign Up" textFill="#f2f0f0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="ttt" fill="#f80c00" layoutX="211.0" layoutY="579.0" strokeWidth="0.0" wrappingWidth="300.2578125">
+               <font>
+                  <Font size="34.0" />
+               </font></Text>
+            <Text fx:id="error1" fill="#ee1118" layoutX="189.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
+            <Text fx:id="error2" fill="#ee1118" layoutX="186.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.9999897815287" />
+            <Text fx:id="error3" fill="#ee1118" layoutX="186.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
+            <Text fx:id="error4" fill="#ee1118" layoutX="186.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
+            <Text fx:id="error5" fill="#ee1118" layoutX="186.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000160038471" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="Back" buttonType="RAISED" layoutX="138.0" layoutY="496.0" onAction="#btnBack" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: green;" text="Login" textFill="#f2f0f0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="14.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nếu bạn đã tạo cho mình 1 tài khoản thành công , hãy đăng nhập nào ." textAlignment="CENTER" wrappingWidth="386.99998177215457">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+/*.search-box-{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.search-button-{
+    -fx-background-color: gray;
+    -fx-background-radius: 80;
+}
+.menu-box-{
+    -fx-background-color: #FF7F50;
+}
+.view-box-{
+    -fx-background-color:#FF7F50;
+    -fx-background-radius: 80;
+}*/
+
+.label:hover {
+    -fx-border: none;  
+    -fx-text-fill: blue;
+}

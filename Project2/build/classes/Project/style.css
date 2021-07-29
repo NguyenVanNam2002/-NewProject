@@ -1,0 +1,10 @@
+
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 3.0 , 0.0 , 0.0 ,10.0);
+}
+
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+        -fx-background-radius: 30;
+}

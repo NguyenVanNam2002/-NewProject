@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="946.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller = "Project.CategoryEditController">
+   <children>
+      <Text layoutX="137.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên danh mục :" wrappingWidth="201.73046875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtCat_name" layoutX="297.0" layoutY="318.0" prefHeight="44.0" prefWidth="385.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="6.0" layoutY="233.0" prefHeight="7.0" prefWidth="934.0" />
+      <Separator layoutX="6.0" layoutY="416.0" prefHeight="30.0" prefWidth="934.0" />
+      <Label layoutX="54.0" layoutY="595.0" text="Message:" textFill="#0d0d0d" />
+      <Label fx:id="lbMessage" layoutX="133.0" layoutY="595.0" />
+      <JFXButton fx:id="btnIndex" layoutX="127.0" layoutY="464.0" onAction="#btnIndexClick" prefHeight="64.0" prefWidth="123.0" style="-fx-background-color: #668aff;" text="Index&gt;&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSubmit" layoutX="408.0" layoutY="464.0" onAction="#btnSubmitClick" prefHeight="64.0" prefWidth="130.0" style="-fx-background-color: #668aff;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnReset" layoutX="675.0" layoutY="464.0" prefHeight="64.0" prefWidth="132.0" style="-fx-background-color: #668aff;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="297.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category Edit">
+         <font>
+            <Font name="System Bold Italic" size="46.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="COG" layoutX="620.0" layoutY="174.0" size="45" text="" />
+   </children>
+</AnchorPane>

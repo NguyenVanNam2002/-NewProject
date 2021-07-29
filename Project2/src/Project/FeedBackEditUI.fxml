@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.FeedBackEditController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="600.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="211.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FeedBack Edit">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="220.0" top="30.0" />
+               </HBox.margin>
+            </Text>
+            <FontAwesomeIconView glyphName="COG" size="28">
+               <HBox.margin>
+                  <Insets left="10.0" top="30.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="178.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nội  dung" wrappingWidth="77.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-20.0" left="120.0" top="90.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sản phẩm" wrappingWidth="116.73046875" GridPane.rowIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-80.0" left="120.0" />
+               </GridPane.margin>
+            </Text>
+            <JFXTextArea fx:id="txtContent" prefHeight="45.0" prefWidth="251.0" unFocusColor="BLACK" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="-20.0" left="-60.0" right="50.0" top="60.0" />
+               </GridPane.margin>
+            </JFXTextArea>
+            <JFXTextField fx:id="txtProductID" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="-70.0" left="-60.0" right="50.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <Separator prefWidth="200.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="15.0" left="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="15.0" right="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="-150.0" left="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="-150.0" right="30.0" />
+               </GridPane.margin>
+            </Separator>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </GridPane>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <JFXButton fx:id="btnIndex" onAction="#btnIndexClick" prefHeight="64.0" prefWidth="119.0" style="-fx-background-color: #668aff;" text="Index&gt;&gt;">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSubmit" onAction="#btnSubmitClick" prefHeight="64.0" prefWidth="119.0" style="-fx-background-color: #668aff;" text="Submit">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnReset" prefHeight="64.0" prefWidth="119.0" style="-fx-background-color: #668aff;" text="Reset">
+               <HBox.margin>
+                  <Insets left="70.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label text="Message:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lbMessage" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="110.0" />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

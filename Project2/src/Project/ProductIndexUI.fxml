@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="787.0" prefWidth="1118.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.ProductIndexUIController">
+   <children>
+      <JFXButton fx:id="btnUpdate" layoutX="976.0" layoutY="560.0" onAction="#btnUpdateClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="976.0" layoutY="714.0" onAction="#btnDeleteClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Delete" />
+      <ImageView fx:id="image" fitHeight="269.0" fitWidth="302.0" layoutX="150.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="btnInsert" layoutX="976.0" layoutY="411.0" onAction="#btnInsertClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Insert" textAlignment="CENTER" />
+      <Text fx:id="u" layoutX="880.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="235.99998438358307" />
+      <HBox layoutX="809.0" layoutY="18.0" prefHeight="40.0" prefWidth="283.0" style="-fx-background-radius: 100; -fx-background-color: white; -fx-border-color: blue;" styleClass="search-box-" stylesheets="@css_client.css">
+         <children>
+            <JFXButton fx:id="Btnsearch" onAction="#btnsearch" prefHeight="43.0" prefWidth="57.0" style="-fx-background-color: #0096FF;" styleClass="search-button-" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtSearch" alignment="CENTER" focusTraversable="false" prefHeight="40.0" prefWidth="200.0" promptText="Type here to search" style="-fx-background-color: rgba(0,0,0,0);">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="116.0" layoutY="411.0" prefHeight="362.0" prefWidth="811.0">
+         <content>
+            <TableView fx:id="tvProduct" onMouseClicked="#onMouseClick" prefHeight="359.0" prefWidth="809.0" style="-fx-background-color: Lavender; -fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="tcName" prefWidth="155.0" text="Name" />
+                <TableColumn fx:id="tcPrice" prefWidth="154.0" text="Price" />
+                  <TableColumn fx:id="tcProperties" prefWidth="143.0" text="Properties" />
+                  <TableColumn fx:id="tcImages" prefWidth="211.0" text="Images" />
+                  <TableColumn fx:id="tcCategory" prefWidth="144.0" text="Category" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <VBox prefHeight="787.0" prefWidth="116.0" style="-fx-background-color: #ae9b9b;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" size="60">
+               <VBox.margin>
+                  <Insets left="35.0" top="25.0" />
+               </VBox.margin>
+            </FontAwesomeIconView>
+            <JFXButton prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: white;" text="Sản phẩm">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btncategory" onAction="#btncategory" prefHeight="49.0" prefWidth="126.0" style="-fx-background-color: #99c1c2;" text="Danh mục">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnfeedback" onAction="#btnfeedback" prefHeight="52.0" prefWidth="118.0" style="-fx-background-color: #99c1c2;" text="Feedback">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btncustomer" onAction="#btncustomer" prefHeight="49.0" prefWidth="125.0" style="-fx-background-color: #99c1c2;" text="Khách hàng">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="logout" onAction="#btnlogout" prefHeight="49.0" prefWidth="117.0" style="-fx-background-color: #99c1c2;" text="Logout">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Text fx:id="theviewname" layoutX="469.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="theviewprice" layoutX="469.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="theviewpropertis" layoutX="469.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="403.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product" wrappingWidth="214.6708984375">
+         <font>
+            <Font name="System Bold Italic" size="57.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="75.0" fitWidth="99.0" layoutX="618.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../paella_40px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="685.0" prefWidth="966.0" style="-fx-background-color: #d3bb65;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.AddShoppingCart">
+   <children>
+      <Text fx:id="q" fill="WHITE" layoutX="36.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="t" fill="WHITE" layoutX="36.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="user" fill="#fcfcfc" layoutX="17.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="247.99999409914017">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Pane layoutX="48.0" layoutY="28.0" prefHeight="626.0" prefWidth="867.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="286.0" fitWidth="290.0" layoutX="22.0" layoutY="23.0" pickOnBounds="true" />
+            <JFXButton fx:id="order" layoutX="326.0" layoutY="523.0" onAction="#btnorder" prefHeight="46.0" prefWidth="178.0" style="-fx-background-color: #866161;" text="Thêm giỏ hàng" textFill="WHITE" />
+            <Text layoutX="321.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên Sản phẩm :" />
+            <Text layoutX="321.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại" />
+            <Text layoutX="321.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá" />
+            <Text layoutX="321.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới Thiệu" />
+            <Spinner fx:id="sprinner" layoutX="400.0" layoutY="365.0" />
+            <Text layoutX="321.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantitty" />
+            <Text fx:id="id" layoutX="321.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="ordersucess" fill="RED" layoutX="259.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="311.6708984375" />
+            <Text layoutX="588.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VNĐ" />
+            <Text fx:id="thename" layoutX="431.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="345.6708984375" />
+            <Text fx:id="category" layoutX="423.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="273.6708984375" />
+            <Text fx:id="theprice" layoutX="415.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.6708984375" />
+            <Text fx:id="proties" layoutX="420.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.6708984375" />
+            <Pane fx:id="show" layoutX="224.0" layoutY="168.0" prefHeight="184.0" prefWidth="393.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="succes" fitHeight="90.0" fitWidth="126.0" layoutX="164.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../tenor.gif" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textsussec" layoutX="40.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm giỏ hàng thành công" textAlignment="CENTER" wrappingWidth="326.6708914488554">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="error" fitHeight="90.0" fitWidth="140.0" layoutX="144.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../comp_3.gif" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="texterrors" layoutX="30.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng sản phẩm trong giỏ quá 50" textAlignment="CENTER" wrappingWidth="345.67090840637684">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
