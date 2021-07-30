@@ -15,11 +15,15 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 /**
  *
@@ -58,8 +62,15 @@ public class Client_infomation {
 
     @FXML
     private Text errors11;
+   
     @FXML
-    private Text succes;
+    private Pane show;
+
+    @FXML
+    private ImageView succes;
+
+    @FXML
+    private Text texterrors;
 
     @FXML
     void back(MouseEvent event) throws IOException {
@@ -85,7 +96,18 @@ public class Client_infomation {
                 update.setAccount(this.psu.getAccount());
                 boolean suc = psud.information(update);
                 if(suc){
-                    succes.setText("update succesfully");
+                    show.setVisible(true);
+                    succes.setVisible(true);
+                    texterrors.setVisible(true);
+                    PauseTransition pt = new PauseTransition();
+                    pt.setDuration(Duration.seconds(2));
+                    pt.setOnFinished(e -> {
+                           show.setVisible(false);
+                           succes.setVisible(false);
+                           texterrors.setVisible(false);
+                    });
+
+                    pt.play(); 
                 }
             }
         } catch (Exception e) {
@@ -99,8 +121,12 @@ public class Client_infomation {
             infomaitonselect(p.getAccount());
         }
     }
-    public void initialize(){
-       
+     public void initialize() {
+        
+        show.setVisible(false);
+        succes.setVisible(false);
+        texterrors.setVisible(false);
+   
     }
     private ProjectSignUp extractPasswordFromFields() {
         ProjectSignUp sign = new ProjectSignUp(); 
@@ -117,19 +143,19 @@ public class Client_infomation {
     }
     private boolean Validate(){
         if(name.getText().isEmpty()){
-            errors.setText("Name not empty");
+            errors.setText("Tên trống");
             return false;
         }else{
             errors.setText("");
         }
         if(name.getText().length() < 5){
-            errors.setText("Name more than 5");
+            errors.setText("Tên phải dài hơn 5 kí tự");
             return false;
         }else{
             errors.setText("");
         }
-        if(name.getText().length() > 255){
-            errors.setText("Name less than 255");
+        if(name.getText().length() > 100){
+            errors.setText("Tên phải ngắn hơn 100 kí tự");
             return false;
         }else{
             errors.setText("");
@@ -137,19 +163,19 @@ public class Client_infomation {
         
         
         if(phone.getText().isEmpty() ){
-            errors1.setText("Your Phone not empty");
+            errors1.setText("Số điện thoại trống");
             return false; 
         }else{
            try {
                 Integer.parseInt(phone.getText());
                 errors1.setText("");
             } catch (NumberFormatException e) {
-                errors1.setText("Price is not character !");
+                errors1.setText("Số điện thoại lá số , không phải kí tự !");
                 return false;
             }
         }
         if(phone.getText().length() != 10 ){
-            errors1.setText("Your Phone Number not equals 10");
+            errors1.setText("Số điện thoại phải là 10 số");
             return false; 
         }else{
             errors1.setText("");
@@ -160,29 +186,24 @@ public class Client_infomation {
          ){
             errors1.setText("");
         }else{
-            errors1.setText("phone numbers starting with 09 , 08 , 07 , 05 and 03");
+            errors1.setText("Số điện thoại bắt đầu bằng 09 , 08 , 07 , 05 và 03");
             return false; 
             
         }
         
         if(address.getText().isEmpty()){
-            errors11.setText("address not empty");
+            errors11.setText("Địa chỉ trống");
             return false; 
         }else{
             errors11.setText("");
         }
         if(address.getText().length() < 10){
-            errors11.setText("Unknown address");
+            errors11.setText("Địa chỉ của bạn không rõ ràng");
             return false; 
         }else{
             errors11.setText("");
         }
-        if(address.getText().contains("Hà Nội") || address.getText().contains("hà nội")){
-             errors11.setText("");
-        }else{
-            errors11.setText("You are too far from Hanoi.");
-            return false; 
-        }
+       
         return true;
     }
    public void infomaitonselect(String user){

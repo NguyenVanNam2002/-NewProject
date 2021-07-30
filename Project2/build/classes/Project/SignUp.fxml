@@ -55,15 +55,25 @@
                   <Font size="19.0" />
                </font>
             </JFXButton>
-            <Text fx:id="ttt" fill="#f80c00" layoutX="211.0" layoutY="579.0" strokeWidth="0.0" wrappingWidth="300.2578125">
-               <font>
-                  <Font size="34.0" />
-               </font></Text>
             <Text fx:id="error1" fill="#ee1118" layoutX="189.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
             <Text fx:id="error2" fill="#ee1118" layoutX="186.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="377.9999897815287" />
             <Text fx:id="error3" fill="#ee1118" layoutX="186.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
             <Text fx:id="error4" fill="#ee1118" layoutX="186.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000298283994" />
             <Text fx:id="error5" fill="#ee1118" layoutX="186.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.0000160038471" />
+            <Pane fx:id="show" layoutX="-81.0" layoutY="147.0" prefHeight="184.0" prefWidth="393.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="succes" fitHeight="90.0" fitWidth="126.0" layoutX="164.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../tenor.gif" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="texterrors" layoutX="30.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tạo tài khoản thành công" textAlignment="CENTER" wrappingWidth="345.67090840637684">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
          </children>
       </Pane>
       <JFXButton fx:id="Back" buttonType="RAISED" layoutX="138.0" layoutY="496.0" onAction="#btnBack" prefHeight="46.0" prefWidth="140.0" style="-fx-background-color: green;" text="Login" textFill="#f2f0f0">

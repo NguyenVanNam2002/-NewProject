@@ -11,7 +11,7 @@
             <Font size="13.0" />
          </font>
       </JFXButton>
-      <JFXButton accessibleText="his" prefHeight="75.0" prefWidth="139.0" text="History Order">
+      <JFXButton accessibleText="his" prefHeight="75.0" prefWidth="139.0" text="Lịch sử Order">
          <font>
             <Font size="14.0" />
          </font>

@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.PauseTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,10 +33,13 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 /**
  *
@@ -70,6 +74,21 @@ public class Shopping_cart {
     private OrderListener orderlis;
     @FXML
     private Text orderid;
+      @FXML
+    private Pane show;
+
+    @FXML
+    private ImageView succes1;
+
+    @FXML
+    private Text textsussec;
+
+    @FXML
+    private ImageView error;
+
+    @FXML
+    private Text texterrors;
+
 
     ObservableList<Order> ordr = FXCollections.observableArrayList();
     ObservableList<Product> pro = FXCollections.observableArrayList();
@@ -92,7 +111,6 @@ public class Shopping_cart {
                 selectShoping(user.getText(), sote.getText());
                 for (int d = 0; d < listOrderId.size(); d++) {
                     if (selectOrderDetail(listOrderId.get(d))) {
-
                     } else {
                         for (int c = 0; c < listProductID.size(); c++) {
                             insert(listOrderId.get(d), listProductID.get(c), listQuantity.get(c));
@@ -101,8 +119,25 @@ public class Shopping_cart {
                     }
 
                 }
-                ProjectSignUp e = extractSignUpFromFields();
-                Nagatice.getInstance().goToShopping(e);
+                 show.setVisible(true);
+                succes1.setVisible(true);
+                textsussec.setVisible(true);
+                PauseTransition pt = new PauseTransition();
+                pt.setDuration(Duration.seconds(2));
+                pt.setOnFinished(e -> {
+                       show.setVisible(false);
+                       succes1.setVisible(false);
+                       textsussec.setVisible(false);
+                       ProjectSignUp account = extractSignUpFromFields();
+                    try {
+                        Nagatice.getInstance().goToShopping(account);
+                    } catch (IOException ex) {
+                        Logger.getLogger(Shopping_cart.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                });
+
+                pt.play(); 
+               
             }
         }
     }
@@ -126,6 +161,11 @@ public class Shopping_cart {
         totalprice.setVisible(false);
         quantity.setVisible(false);
         orderid.setVisible(false);
+        show.setVisible(false);
+        succes1.setVisible(false);
+        textsussec.setVisible(false);
+        error.setVisible(false);
+        texterrors.setVisible(false);
     }
 
     private void setChosenSnack(Order snack) {
@@ -362,14 +402,18 @@ public class Shopping_cart {
     // validation
     private boolean validation() {
         if (Integer.parseInt(sote.getText()) <= 0) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("Trong giỏ của bạn không có sản phẩm nào");
-            alert.setTitle("Lưu ý");
-            Optional<ButtonType> confirmationResponse
-                    = alert.showAndWait();
-            if (confirmationResponse.get() == ButtonType.OK) {
+            show.setVisible(true);
+            error.setVisible(true);
+            texterrors.setVisible(true);
+            PauseTransition pt = new PauseTransition();
+            pt.setDuration(Duration.seconds(2));
+            pt.setOnFinished(e -> {
+                   show.setVisible(false);
+                   error.setVisible(false);
+                   texterrors.setVisible(false);
+            });
 
-            }
+            pt.play();
             return false;
         }
         return true;

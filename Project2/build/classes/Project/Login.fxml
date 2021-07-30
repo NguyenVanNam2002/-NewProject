@@ -38,11 +38,20 @@
             <Text fx:id="error1" fill="#e00b0b" layoutX="118.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="441.0000070929527" />
             <FontAwesomeIconView glyphName="USERS" layoutX="346.0" layoutY="74.0" size="45" text="" wrappingWidth="53.642860412597656" />
             <ComboBox fx:id="Sign" editable="true" layoutX="168.0" layoutY="400.0" prefHeight="31.0" prefWidth="242.0" promptText="Vui lòng chọn vai trò của bạn" />
-            <ImageView fx:id="loading" fitHeight="60.0" fitWidth="97.0" layoutX="229.0" layoutY="563.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../200w.gif" />
-               </image>
-            </ImageView>
+            <Pane fx:id="show" layoutX="102.0" layoutY="211.0" prefHeight="184.0" prefWidth="393.0" style="-fx-background-color: white; -fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="succes" fitHeight="90.0" fitWidth="126.0" layoutX="164.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../tenor.gif" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="texterrors" layoutX="30.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập thành công" textAlignment="CENTER" wrappingWidth="345.67090840637684">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
          </children>
       </Pane>
       <Pane layoutX="573.0" layoutY="-6.0" prefHeight="658.0" prefWidth="505.0" style="-fx-background-color: #ff2e00;">

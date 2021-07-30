@@ -56,13 +56,22 @@
       <JFXTextField fx:id="address" layoutX="511.0" layoutY="486.0" prefHeight="31.0" prefWidth="317.0" style="-fx-background-color: white;" />
       <FontAwesomeIconView fill="WHITE" glyphName="PHONE" layoutX="453.0" layoutY="430.0" size="45" text="" />
       <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="453.0" layoutY="514.0" size="45" text="" />
-      <Text fx:id="succes" fill="RED" layoutX="380.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="608.9999943375587">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Text>
       <Text fx:id="errors" fill="RED" layoutX="511.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
       <Text fx:id="errors1" fill="RED" layoutX="511.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
       <Text fx:id="errors11" fill="RED" layoutX="511.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.99999572336674" />
+      <Pane fx:id="show" layoutX="453.0" layoutY="333.0" prefHeight="184.0" prefWidth="393.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="succes" fitHeight="90.0" fitWidth="126.0" layoutX="150.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../tenor.gif" />
+               </image>
+            </ImageView>
+            <Text fx:id="texterrors" layoutX="5.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cập nhập thông tin thành công" textAlignment="CENTER" wrappingWidth="383.0000009536743">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

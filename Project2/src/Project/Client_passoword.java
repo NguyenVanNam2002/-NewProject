@@ -14,12 +14,18 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 /**
  *
@@ -34,8 +40,6 @@ public class Client_passoword {
     @FXML
     private JFXButton menu;
     
-    @FXML
-    private Text succes;
     @FXML
     private JFXButton changepassword;
 
@@ -59,6 +63,15 @@ public class Client_passoword {
 
     @FXML
     private JFXButton backsetting;
+    @FXML
+    private Pane show;
+
+    @FXML
+    private ImageView succes;
+
+    @FXML
+    private Text texterrors;
+    
     
     @FXML
     void back(MouseEvent event) throws IOException {
@@ -94,9 +107,25 @@ public class Client_passoword {
                         if (confirmationResponse.get() == ButtonType.OK) {
                             boolean reslut = psud.update(change);
                             if(reslut){
-                                succes.setText("Đổi mật khẩu thành công");
+                                show.setVisible(true);
+                                succes.setVisible(true);
+                                texterrors.setVisible(true);
+                                PauseTransition pt = new PauseTransition();
+                                pt.setDuration(Duration.seconds(2));
+                                pt.setOnFinished(e -> {
+                                       show.setVisible(false);
+                                       succes.setVisible(false);
+                                       texterrors.setVisible(false);
+                                    try {
+                                        Nagatice.getInstance().goToIndex();
+                                    } catch (IOException ex) {
+                                        Logger.getLogger(Client_passoword.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                });
+
+                                pt.play();  
                             }else{
-                                succes.setText("Đổi mật khẩu không thành công");
+                                
                             }
                         }
                     }else{
@@ -116,6 +145,13 @@ public class Client_passoword {
         if(this.psu != null){
             user.setText(p.getAccount());
         }
+    }
+     public void initialize() {
+        
+        show.setVisible(false);
+        succes.setVisible(false);
+        texterrors.setVisible(false);
+   
     }
     private ProjectSignUp extractPasswordFromFields() {
         ProjectSignUp sign = new ProjectSignUp(); 
@@ -146,54 +182,44 @@ public class Client_passoword {
     private boolean Validate(){
       
         if(oldPassword.getText().isEmpty() ){
-            erros1.setText("Password not empty");
+            erros1.setText("Mật khẩu cũ trống");
             return false; 
         }else{
             erros1.setText("");
         }
         if(oldPassword.getText().length() < 8 ){
-            erros1.setText("Password more than 8");
+            erros1.setText("Mật khẩu phải dài hơn 8 kí tự");
             return false; 
         }else{
             erros1.setText("");
         }
         if(oldPassword.getText().length() > 16 ){
-            erros1.setText("Password less than 16");
+            erros1.setText("Mật khẩu phải ngắn hơn 16 kí tự");
             return false; 
         }else{
            erros1.setText("");
         }
-        if(oldPassword.getText().length() > 16 ){
-            erros1.setText("Password less than 16");
-            return false; 
-        }else{
-            erros1.setText("");
-        }
+        
         
         if(newpassword.getText().isEmpty() ){
-            erros.setText("Password not empty");
+            erros.setText("Mật khẩu mới trống");
             return false; 
         }else{
             erros.setText("");
         }
         if(newpassword.getText().length() < 8 ){
-            erros.setText("Password more than 8");
+            erros.setText("Mật khẩu mới phải dài hơn  8 kí tự");
             return false; 
         }else{
             erros.setText("");
         }
         if(newpassword.getText().length() > 16 ){
-            erros.setText("Password less than 16");
+            erros.setText("Mật khẩu mới phải ngắn hơn 16 kí tự");
             return false; 
         }else{
            erros.setText("");
         }
-        if(newpassword.getText().length() > 16 ){
-            erros.setText("Password less than 16");
-            return false; 
-        }else{
-            erros.setText("");
-        }
+        
         return true;
     }
 }

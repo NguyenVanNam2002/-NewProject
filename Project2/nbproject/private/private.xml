@@ -4,11 +4,22 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Shopping_cart.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/WelcomeController.java</file>
             <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/AddShoppingCart.java</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Data/OrderDAOImpl.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Client_feedback.fxml</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/FunctionLogin.java</file>
             <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Data/OrderDetail.java</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/OrderItem.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/DbProject/DbProject.java</file>
             <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/FunctionSingUpInsert.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/CategoryClient.fxml</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/WellcomeScene.fxml</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Nagatice.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Client_feedback.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Client_passoword.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Data/OrderDAOImpl.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Client_infomation.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/Client_ChooseController.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documents/NetBeansProjects/Project2/src/Project/AddShoppingcart.fxml</file>
         </group>
     </open-files>
 </project-private>

@@ -17,7 +17,7 @@ public class DbProject {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
     private static final String CONN_STRING
-            = "jdbc:mysql://localhost/snack_shop";
+            = "jdbc:mysql://localhost/Snack_Shop113";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);

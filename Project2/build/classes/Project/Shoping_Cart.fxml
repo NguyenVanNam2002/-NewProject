@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="866.0" prefWidth="1299.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Shopping_cart">
    <children>
-      <Pane layoutY="-1.0" prefHeight="92.0" prefWidth="1299.0" style="-fx-background-color: pink;">
+      <Pane layoutY="-1.0" prefHeight="92.0" prefWidth="1299.0" style="-fx-background-color: #FF7F50;">
          <children>
             <Text fill="WHITE" layoutX="477.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Snack Shop Menu" wrappingWidth="290.22265625">
                <font>
@@ -92,5 +92,29 @@
             </JFXButton>
             <Text fx:id="orderid" layoutX="932.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children></Pane>
+      <Pane fx:id="show" layoutX="472.0" layoutY="312.0" prefHeight="252.0" prefWidth="488.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="succes1" fitHeight="90.0" fitWidth="126.0" layoutX="204.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../tenor.gif" />
+               </image>
+            </ImageView>
+            <Text fx:id="textsussec" layoutX="71.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order thành công" textAlignment="CENTER" wrappingWidth="326.6708914488554">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="error" fitHeight="90.0" fitWidth="140.0" layoutX="184.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../comp_3.gif" />
+               </image>
+            </ImageView>
+            <Text fx:id="texterrors" layoutX="71.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui lòng thêm sản phẩm vào giỏ để thực hiện chức năng order" textAlignment="CENTER" wrappingWidth="345.67090840637684">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

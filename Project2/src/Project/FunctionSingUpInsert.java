@@ -14,9 +14,13 @@ import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 /**
  *
@@ -64,7 +68,15 @@ public class FunctionSingUpInsert {
 
     @FXML
     private Text error5;
+    
+    @FXML
+    private Pane show;
 
+    @FXML
+    private ImageView succes;
+
+    @FXML
+    private Text texterrors;
     @FXML
     void btnBack(ActionEvent event) throws IOException {
         Nagatice.getInstance().goToIndex();
@@ -78,7 +90,18 @@ public class FunctionSingUpInsert {
                     ProjectSignUp insert = extractSignUpFromFields();
                     insert = psd.insert(insert);
                     
-                    ttt.setText("insert succesfuly");
+                    show.setVisible(true);
+                    succes.setVisible(true);
+                    texterrors.setVisible(true);
+                    PauseTransition pt = new PauseTransition();
+                    pt.setDuration(Duration.seconds(2));
+                    pt.setOnFinished(e -> {
+                           show.setVisible(false);
+                           succes.setVisible(false);
+                           texterrors.setVisible(false);
+                    });
+
+                    pt.play();  
                 }
             }
         }catch(Exception  e){
@@ -89,6 +112,9 @@ public class FunctionSingUpInsert {
     }
     public void initialize() {
         System.out.println("#Insert Customer initialized!");
+        show.setVisible(false);
+        succes.setVisible(false);
+        texterrors.setVisible(false);
    
     }
       
@@ -106,94 +132,88 @@ public class FunctionSingUpInsert {
     
     private boolean Validate(){
         if(name.getText().isEmpty()){
-            error1.setText("Tên không được trống");
+            error1.setText("Tên  trống");
             return false;
         }else{
             error1.setText("");
         }
         if(name.getText().length() < 5){
-            error1.setText("Tên phải nhiều hơn 5");
+            error1.setText("Tên phải nhiều hơn 5 kí tự");
             return false;
         }else{
             error1.setText("");
         }
-        if(name.getText().length() > 255){
-            error1.setText("Name less than 255");
+        if(name.getText().length() > 100){
+            error1.setText("Tên không thể quá 100 kí tự");
             return false;
         }else{
             error1.setText("");
         }
         
         if(account.getText().isEmpty() ){
-            error2.setText("Account not empty");
+            error2.setText("Tài khoản  trống");
             return false; 
         }else{
             error2.setText("");
         }
         if(account.getText().length() < 10 ){
-            error2.setText("Account more than 10");
+            error2.setText("Tài khoản phải dài hơn 10 kí tự");
             return false; 
         }else{
             error2.setText("");
         }
         if(account.getText().length() > 40 ){
-            error2.setText("Account less than 40");
+            error2.setText("Tài khoản ngắn hơn 40 kí tự");
             return false; 
         }else{
             error2.setText("");
         }
         if(!account.getText().contains("@gmail.com") ){
-            error2.setText("Account have a @gmail.com");
+            error2.setText("Tài khoản thiếu @gmail.com ở sau cùng");
             return false; 
         }else{
             error2.setText("");
         }
         if(account.getText().contains(" ") ){
-            error2.setText("Account not have space");
+            error2.setText("Tài khoản không được có dáu cách");
             return false; 
         }else{
             error2.setText("");
         }
         
         if(password.getText().isEmpty() ){
-            error3.setText("Password not empty");
+            error3.setText("Mật khẩu  trống");
             return false; 
         }else{
             error3.setText("");
         }
         if(password.getText().length() < 8 ){
-            error3.setText("Password more than 8");
+            error3.setText("Mật khẩu phải từ  8 kí tự đổ lên");
             return false; 
         }else{
             error3.setText("");
         }
         if(password.getText().length() > 16 ){
-            error3.setText("Password less than 16");
-            return false; 
-        }else{
-            error3.setText("");
-        }
-        if(password.getText().length() > 16 ){
-            error3.setText("Password less than 16");
+            error3.setText("Mật khẩu ngắn hơn 16 kí tự");
             return false; 
         }else{
             error3.setText("");
         }
         
         if(phone.getText().isEmpty() ){
-            error4.setText("Your Phone not empty");
+            error4.setText("Số điện thoại trống");
             return false; 
         }else{
             try {
                 Integer.parseInt(phone.getText());
                 error4.setText("");
             } catch (NumberFormatException e) {
-                error4.setText("Price is not character !");
+                error4.setText("Vui lòng nhập số điện thoại , không phải kí tự !");
                 return false;
             }
         }
         if(phone.getText().length() != 10 ){
-            error4.setText("Your Phone Number not equals 10");
+            error4.setText("Số điện thoại của bạn không hợp lệ , phải có 10 số");
             return false; 
         }else{
             error4.setText("");
@@ -204,13 +224,13 @@ public class FunctionSingUpInsert {
          ){
             error4.setText("");
         }else{
-            error4.setText("phone numbers starting with 09 , 08 , 07 , 05 and 03");
+            error4.setText("Số điệnt thoại bắt đầu bằng 09 , 08 , 07 , 05 và 03");
             return false; 
             
         }
         
         if(address.getText().isEmpty()){
-            error5.setText("address not empty");
+            error5.setText("Địa chỉ trống");
             return false; 
         }else{
             error5.setText("");
